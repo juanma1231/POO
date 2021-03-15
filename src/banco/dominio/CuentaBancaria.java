@@ -1,5 +1,8 @@
 package banco.dominio;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
 public class CuentaBancaria {
     public Banco banco;
     public String tipo; // Sí es ahorros o corriente
@@ -9,6 +12,7 @@ public class CuentaBancaria {
     public Date fechaApertura;
     public String contrasena;
     public String estado;
+
 
     public String consultarSaldo() {
         return "Hola " + this.titular.nombre  + ", su saldo es: " + this.saldo;
@@ -49,3 +53,5 @@ public class CuentaBancaria {
     }
 
 }
+
+
