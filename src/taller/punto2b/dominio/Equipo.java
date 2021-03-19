@@ -8,17 +8,13 @@ public class Equipo {
     private String nombre;
 
     public Equipo(List<Corredor> corredores, String nombre) {
-        this.corredores = corredores;
-        this.nombre = nombre;
-    }
-    //public Equipo(List<Corredor> corredores, String nombre) {
-        //if (corredores.size()<=7){
-           // this.corredores = corredores;
-           // this.nombre = nombre;
-       // }
-        //else System.out.println("el numero maximo de corredores por equipo es 7");
+        if (corredores.size()<=7 && corredores.size()>=1){
+            this.corredores = corredores;
+            this.nombre = nombre;
+        }
+        else System.out.println("solo se permiten 7 corredores por equipo");
 
-   // }
+    }
 
     public List<Corredor> getCorredores() {
         return corredores;

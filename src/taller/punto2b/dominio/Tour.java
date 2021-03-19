@@ -7,59 +7,74 @@ import java.util.List;
 public class Tour {
     private List<Equipo> equipos = new ArrayList<>();
     private  List<Etapa> etapas = new ArrayList<>();
+    private String nombre;
 
     public Tour(List<Equipo> equipos) {
         this.equipos = equipos;
     }
 
-    public Tour(List<Equipo> equipos, List<Etapa> etapas) {
+    public Tour(List<Equipo> equipos, List<Etapa> etapas, String nombre) {
         if (etapas.size()==21){
-            if (equipos.size()<=5 && equipos.size()==1){
+            if (equipos.size()<=5 && equipos.size()>=1){
                 this.etapas = etapas;
                 this.equipos = equipos;
+                this.nombre = nombre;
             }
             else System.out.println("no se permite más de 5 equipos y debe de haber más de un equipo");
         }
-        System.out.println("no se permite una cantidad diferente a 21 etapas");
+        else System.out.println("no se permite una cantidad diferente a 21 etapas");
+
 
 
     }
-    public void mostrarEquipos(){
+    public  List<String> mostrarEquipos(){
+        List<String> nom = new ArrayList<>();
+
         for (Equipo c : this.equipos){
-            System.out.println("la lista de equipos es: ");
-            System.out.println("- "+ c.getNombre());
+            nom.add(c.getNombre());
         }
+        return nom;
     }
 
-    public void mostrarEtapas(){
-        System.out.println("los resultados de todas las etapas son: ");
-        for (Etapa a : this.etapas){
-            System.out.println("en la etapa "+ a.getNombre() + "el resultado fué: "+ a.getResultado());
-        }
+    public List<Etapa> mostrarEtapas(){
+        return this.etapas;
     }
-    public void mostrarEtapaEspesifica(String e){
+    public Etapa mostrarEtapaEspesifica(String e){
+        Etapa C = new Etapa("JI","OK");
         for (Etapa a : this.etapas){
             if (a.getNombre()==e){
-                System.out.println("el resultado en la etapa "+ e+ "es: "+ a.getResultado());
+                C.setResultado(a.getResultado());
+                C.setNombre(a.getNombre());
             }
         }
+        return C;
+
     }
-    public void mostrarEdad(String a){
+    public List<Integer> top10(){
+        List<Integer> puntuaciones = new ArrayList<>();
+        for (Equipo a: equipos) {
+            for(Corredor b:a.getCorredores()){
+                puntuaciones.add(b.getPuntaje());
+            }
+        }
+        Collections.sort(puntuaciones);
+        return puntuaciones;
+
+    }
+    public List<Corredor> mostrarEdad(String a){
+        List<Corredor> c = new ArrayList<>();
         for(Equipo b :this.equipos){
             if (b.getNombre()==a){
+
                 Collections.sort(b.getCorredores());
-                System.out.println("la lista de corredores con sus correspondientes edades es: ");
-                for(Corredor d: b.getCorredores()){
-                    System.out.println("- "+ d.getNombre()+" que tiene: "+ d.getEdad()+"años");
+                c=b.getCorredores();
                 }
 
-                }
             }
+        return c;
         }
+
     }
-
-
-
 
 
 

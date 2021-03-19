@@ -17,4 +17,12 @@ public class Etapa {
     public String getResultado() {
         return resultado;
     }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setResultado(String resultado) {
+        this.resultado = resultado;
+    }
 }
