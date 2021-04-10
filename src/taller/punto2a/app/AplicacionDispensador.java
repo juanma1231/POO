@@ -73,6 +73,12 @@ public class AplicacionDispensador {
         }else {
             System.out.println("aumento realizado");
         }
+        Producto j = new Producto("jujan",23,"j",2);
+        Producto k = new Producto("julian", 23,"bi",3);
+        j = k;
+        j.setCantidadActual(4);
+        System.out.println(j);
+        System.out.println(k.getCantidadActual());
 
 
 
