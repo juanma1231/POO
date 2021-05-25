@@ -24,11 +24,11 @@ public class Main {
 
 
             }else if (primero==1){
-                opJuegO = (String) JOptionPane.showInputDialog(null, "por favot seleeciona una opcion", "piedra papel o tijera", JOptionPane.QUESTION_MESSAGE, null, opcion.toArray(), "piedra");
+                opJuegO = (String) JOptionPane.showInputDialog(null, "por favor seleeciona una opcion", "piedra papel o tijera", JOptionPane.QUESTION_MESSAGE, null, opcion.toArray(), "piedra");
                 String alea = opcion.get(aleatorio.nextInt(opcion.size()));
                 JOptionPane.showMessageDialog(null, "seleecionaste  "+ opJuegO);
                 if (opJuegO== "piedra" && alea=="papel" ){
-                    JOptionPane.showMessageDialog(null, "ganó la computadora" + "\n tu elegiste: "+ opJuegO + "\n y el computador: "+ alea );
+                    JOptionPane.showMessageDialog(null, "ganó HHH" + "\n tu elegiste: "+ opJuegO + "\n y el computador: "+ alea );
                     derrotas= derrotas+1;
                 }else if(opJuegO=="piedra"&& alea=="tijeras"){
                     JOptionPane.showMessageDialog(null, "ganaste!!!" + "\n tu elegiste: "+ opJuegO + "\n y el computador: "+ alea );
