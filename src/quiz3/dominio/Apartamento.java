@@ -29,6 +29,6 @@ public class Apartamento extends Inmueble implements Arrendable{
 
     @Override
     public String toString() {
-        return "apartamento";
+        return "apartamento" + this.getDireccion();
     }
 }

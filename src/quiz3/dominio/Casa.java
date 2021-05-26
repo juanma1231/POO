@@ -28,6 +28,6 @@ public class Casa extends Inmueble implements Arrendable{
 
     @Override
     public String toString() {
-        return "casa";
+        return "casa" + this.getDireccion();
     }
 }

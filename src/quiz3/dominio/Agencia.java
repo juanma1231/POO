@@ -78,4 +78,8 @@ public class Agencia {
         }
         return aux2;
     }
+
+    public List<Inmueble> getInmuebles() {
+        return inmuebles;
+    }
 }

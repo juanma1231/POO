@@ -7,6 +7,6 @@ public class Lote extends Inmueble{
 
     @Override
     public String toString() {
-        return "lote";
+        return "lote" + this.getDireccion();
     }
 }
