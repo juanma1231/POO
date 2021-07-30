@@ -7,6 +7,7 @@ public class Aplicación {
         Persona alejandro = new Persona();
         Persona juanSebastian = new Persona();
 
+
         CuentaBancaria miCuenta = new CuentaBancaria();
         CuentaBancaria cuentaSebas = new CuentaBancaria();
 
